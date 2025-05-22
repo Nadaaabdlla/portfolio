@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Dangrek&family=Honk&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --project-blue: rgb(4, 31, 88);
+    --project-lightblue: rgb(211, 231, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#test{
+    visibility: hidden;
+}
+#test:hover{
+    display: block;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+header nav {
+    width: 30%;
+}
+
+header #logo {
+    width: 70%;
+    padding-left: 20px;
+}
+
+header img {
+    width: 150px;
+    height: 80px;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--project-blue);
+
+}
+
+header nav ul li {
+    list-style: none;
+
+}
+
+header nav ul li:hover {
+    transform: translateY(-5px);
+    color: var(--project-lightblue);
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    gap: 15px;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: white;
+    width: 100%;
+    height: 500px;
+    background-image: url("/imgs/download.jpg");
+    background-size: contain;
+}
+
+#AboutMe {
+    display: flex;
+    gap: 10px;
+    background-color: var(--project-lightblue);
+    align-items: center;
+    border-radius: 15px;
+}
+
+#AboutMePhoto {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#AboutMeBio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 75%;
+    padding: 0 10px;
+}
+
+#AboutMe img {
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+
+}
+#AboutMe input {
+    padding: 10px;
+    background-color: var(--project-blue);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    border: 1px solid var(--project-blue);
+    cursor: pointer;
+    align-self: center;
+}
+
+#AboutMe input:hover {
+    background-color: var(--project-lightblue);
+    color: black;
+}
+
+#MySkills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--project-lightblue);
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+}
+
+#MySkills img {
+    width: 50px;
+    height: 50px;
+}
+
+#MySkills .con0 {
+    display: grid;
+    grid-template-areas:
+        "con1 con2 con2"
+        "con1 con5 con3"
+        "con1 con5 con3"
+        "con4 con4 con3"
+        "con4  con4 con3";
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    height: 250px;
+}
+
+#MySkills .con1,
+#MySkills .con2,
+#MySkills .con3,
+#MySkills .con4,
+#MySkills .con5 {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--project-blue);
+    border-radius: 5px;
+    padding: 10px 40px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    gap: 8px;
+    height: 100%;
+}
+
+#MySkills .con1:hover,
+#MySkills .con2:hover,
+#MySkills .con3:hover,
+#MySkills .con4:hover,
+#MySkills .con5:hover {
+    transform: translateY(-5px) translatex(5px);
+    color: white;
+    box-shadow: 5px 5px 8px var(--project-blue);
+}
+
+#MySkills .con1 {
+    grid-area: con1;
+}
+
+#MySkills .con2 {
+    grid-area: con2;
+}
+
+#MySkills .con3 {
+    grid-area: con3;
+}
+
+#MySkills .con4 {
+    grid-area: con4;
+}
+
+#MySkills .con5 {
+    grid-area: con5;
+}
+
+#MySkills a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--project-lightblue);
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#portfolio-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    padding: 20px;
+}
+
+.portfolio-projects-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--project-blue);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    gap: 8px;
+    height: 400px;
+    width: 25%;
+    padding: 20px;
+}
+
+.portfolio-projects-con:hover {
+    transform: translateY(-15px);
+    box-shadow: 5px 5px 10px var(--project-blue);
+}
+
+.portfolio-projects-con img {
+    border-radius: 5px;
+    width: 95%;
+    height: 250px;
+    border: 1px solid var(--project-blue);
+}
+
+.portfolio-projects-con .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.portfolio-projects-con input {
+    padding: 10px;
+    background-color: var(--project-blue);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    border: 1px solid var(--project-blue);
+    cursor: pointer;
+}
+
+.portfolio-projects-con input:hover {
+    background-color: var(--project-lightblue);
+    color: black;
+}
+
+#ContactMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--project-lightblue);
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#ContactMe form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--project-blue);
+    padding: 20px;
+    background-color: white;
+    gap: 15px;
+    width: 25%;
+}
+
+#ContactMe #massege {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+#ContactMe #submit {
+    padding: 10px;
+    background-color: var(--project-blue);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    border: 1px solid var(--project-blue);
+    cursor: pointer;
+    align-self: center;
+}
+
+#ContactMe #submit:hover {
+    background-color: var(--project-lightblue);
+    color: black;
+}
+
+footer {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--project-blue);
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    display: inline-flex;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+footer i {
+    cursor: pointer;
+}
+
+footer i:hover,
+footer a:hover {
+    transform: translatey(-5px);
+}
+
+@media (max-width:1340px) {
+    #portfolio-projects {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:1024px) {
+
+    header nav,
+    header #logo {
+        width: max-content;
+    }
+
+    header {
+        flex-wrap: wrap;
+        height: max-content;
+        margin-bottom: 20px;
+    }
+
+    header,
+    header #logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    #welcome {
+        height: max-content;
+    }
+
+    #AboutMe {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        padding: 15px 5px;
+    }
+
+    #AboutMeBio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #MySkills .con1,
+    #MySkills .con2,
+    #MySkills .con3,
+    #MySkills .con4,
+    #MySkills .con5 {
+        padding: 10px;
+    }
+
+    #portfolio-projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-projects-con {
+        border-radius: 5px;
+        width: 90%;
+        height: max-content;
+        border: 1px solid var(--project-blue);
+    }
+
+    #ContactMe form {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--project-blue);
+        padding: 20px;
+        background-color: white;
+        gap: 15px;
+        width: 75%;
+    }
+
+    #ContactMe #massege {
+        width: 100%;
+        height: 150px;
+        text-align: center;
+    }
+}
+
+@media (max-width:620px) {
+
+    header,
+    header #logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #welcome {
+        height: max-content;
+    }
+
+    #AboutMe {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        padding: 15px 5px;
+    }
+
+    #AboutMeBio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #MySkills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #MySkills img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #MySkills .con0 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: max-content;
+        height: max-content;
+    }
+
+    #MySkills .con1,
+    #MySkills .con2,
+    #MySkills .con3,
+    #MySkills .con4,
+    #MySkills .con5 {
+        width: 100%;
+    }
+
+    #portfolio-projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-projects-con {
+        border-radius: 5px;
+        width: 90%;
+        height: max-content;
+        border: 1px solid var(--project-blue);
+    }
+
+    .portfolio-projects-con img {
+        display: none;
+    }
+
+    #ContactMe form {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--project-blue);
+        padding: 20px;
+        background-color: white;
+        gap: 15px;
+        width: 75%;
+    }
+
+    #ContactMe #massege {
+        width: 100%;
+        height: 150px;
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 10px;
+    }
+}
